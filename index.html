@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chailease Mini Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      padding: 40px;
+      background-color: #f5f5f5;
+    }
+    .box {
+      font-size: 22px;
+      border: 2px solid #333;
+      padding: 25px;
+      border-radius: 10px;
+      background-color: white;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2>🎯 Trả lời câu hỏi để quay quà</h2>
+
+<div class="box" id="question"></div>
+
+<button onclick="generateQuestion()">Câu khác</button>
+
+<script>
+const questions = [
+"Chailease hoạt động trong lĩnh vực gì?",
+"Nhân viên Sales tại Chailease làm gì?",
+"Chailease có mặt ở bao nhiêu quốc gia?",
+"Bạn nghĩ kỹ năng quan trọng nhất của Sales là gì?",
+"Chailease thuộc tập đoàn nào?",
+"Bạn mong muốn điều gì khi làm việc tại Chailease?",
+"Công việc Sales có thử thách gì?",
+"Theo bạn, môi trường Chailease phù hợp với ai?",
+"Bạn biết gì về tài chính thuê mua?",
+"Một ngày làm việc của Sales gồm những gì?"
+];
+
+function generateQuestion() {
+  const randomIndex = Math.floor(Math.random() * questions.length);
+  document.getElementById("question").innerText = questions[randomIndex];
+}
+
+generateQuestion();
+</script>
+
+</body>
+</html>
