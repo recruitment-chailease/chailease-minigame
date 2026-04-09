@@ -51,7 +51,7 @@ if (saved) {
 } else {
   const randomIndex = Math.floor(Math.random() * questions.length);
   const q = questions[randomIndex];
-  document.getElementById("question").innerText = q;
+  document.getElementById("question").innerHTML = q;
   sessionStorage.setItem("question", q);
 }
  
