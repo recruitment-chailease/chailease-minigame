@@ -31,7 +31,7 @@
 
 <body>
 
-<h2>🎯 Trả lời câu hỏi để quay quà</h2>
+<h2>🎯 Trả lời câu hỏi để nhận quà "dưỡng thê" từ Chailease. Đừng ngần ngại dùng sự trợ giúp từ Google nhé ^^ </h2>
 
 <div class="box" id="question"></div>
 
@@ -49,12 +49,16 @@ const questions = [
 "Một ngày làm việc của Sales gồm những gì?"
 ];
 
-function generateQuestion() {
-  const randomIndex = Math.floor(Math.random() * questions.length);
-  document.getElementById("question").innerText = questions[randomIndex];
-}
+const saved = sessionStorage.getItem("question");
 
-generateQuestion();
+if (saved) {
+  document.getElementById("question").innerText = saved;
+} else {
+  const randomIndex = Math.floor(Math.random() * questions.length);
+  const q = questions[randomIndex];
+  document.getElementById("question").innerText = q;
+  sessionStorage.setItem("question", q);
+}
  
   window.onbeforeunload = function() {
   return "Bạn chắc muốn rời trang?";
