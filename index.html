@@ -37,22 +37,17 @@
 
 <script>
 const questions = [
-"Chailease hoạt động trong lĩnh vực gì?",
-"Nhân viên Sales tại Chailease làm gì?",
-"Chailease có mặt ở bao nhiêu quốc gia?",
-"Bạn nghĩ kỹ năng quan trọng nhất của Sales là gì?",
-"Chailease thuộc tập đoàn nào?",
-"Bạn mong muốn điều gì khi làm việc tại Chailease?",
-"Công việc Sales có thử thách gì?",
-"Theo bạn, môi trường Chailease phù hợp với ai?",
-"Bạn biết gì về tài chính thuê mua?",
-"Một ngày làm việc của Sales gồm những gì?"
+"Các sản phẩm chính của Cho thuê tài chính tại Chailease là gì?</b><br><br>Tài sản thuê tài chính tại Chailease có bao gồm bất động sản không?",
+"Cho thuê tài chính là gì?",
+"Trong <b>tháng 3/2024</b>, Chailease đã ký kết khoản vay hợp vốn với 8 ngân hàng khác, số tiền ký kết là bao nhiêu <b>triệu USD?</b>",
+"Những lợi ích khi khách hàng hợp tác với Chailease?",
+"Thời hạn cho thuê tài chính của 1 tài sản tại Chailease thường là bao lâu? <b>(tính theo năm)</b>",
 ];
 
 const saved = sessionStorage.getItem("question");
 
 if (saved) {
-  document.getElementById("question").innerText = saved;
+  document.getElementById("question").innerHTML = saved;
 } else {
   const randomIndex = Math.floor(Math.random() * questions.length);
   const q = questions[randomIndex];
